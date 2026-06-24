@@ -1,0 +1,10 @@
+ecommerce/node_modules/
+backend/node_modules/
+
+ecommerce/dist/
+
+.env
+backend/.env
+ecommerce/.env
+
+*.log
