@@ -17,7 +17,7 @@ const Contact = () => {
 
     try {
 
-      const response = await axiosInstance.post("http://localhost:3000/api/contact", formData);
+      const response = await axiosInstance.post("/api/contact", formData);
       alert(response.data.message);
 
     } catch (err) {

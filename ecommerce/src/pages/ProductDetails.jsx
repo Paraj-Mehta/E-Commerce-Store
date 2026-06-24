@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
+import axiosInstance from '../service/axiosInstance';
 
 const ProductDetails = () => {
     const { id } = useParams();
@@ -8,7 +9,7 @@ const ProductDetails = () => {
 
         try {
 
-            const response = await axios.get(`http://localhost:3000/products/${id}`);
+            const response = await axiosInstance.get(`/products/${id}`);
             setProduct(response.data.productList);
 
         } catch (err) {

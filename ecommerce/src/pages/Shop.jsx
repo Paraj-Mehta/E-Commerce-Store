@@ -8,7 +8,7 @@ const Shop = () => {
   const navigate = useNavigate();
   const fetchData = async () => {
       try {
-        const respose = await axiosInstance.get("http://localhost:3000/products/list-products")
+        const respose = await axiosInstance.get("/products/list-products")
 
         setProducts(respose.data.products);
       } catch (error) {

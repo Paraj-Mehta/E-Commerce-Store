@@ -19,7 +19,7 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      const response = await axiosInstance.post("http://localhost:3000/register", formData);
+      const response = await axiosInstance.post("/register", formData);
       if (response.status === 201) {
         
         localStorage.setItem("token", response.data.token);
