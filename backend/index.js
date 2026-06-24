@@ -28,7 +28,7 @@ try{
 // middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+app.use(cors({origin : "https://e-commerce-three-mu-56.vercel.app"}));
 app.use('/upload', express.static('upload'));
 
 // Routes
