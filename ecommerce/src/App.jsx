@@ -13,6 +13,7 @@ import ProductDetails from './pages/ProductDetails'
 import ManageCategories from './pages/ManageCategories'
 import AddToCart from './pages/AddToCart'
 import UserProfile from './pages/UserProfile'
+import ForgotPassword from './pages/ForgotPassword'
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
             <Route path="/shop/:id" element={<ProductDetails />} />
             <Route path="/add-to-cart" element={<AddToCart />} />
             <Route path="/user-profile" element={<UserProfile />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
 
 
             <Route path="/manage-products" element={

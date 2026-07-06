@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import axios from 'axios'
 import axiosInstance from '../service/axiosInstance'
-import { useOutletContext, useNavigate } from 'react-router-dom'
+import { useOutletContext, useNavigate, Link } from 'react-router-dom'
 
 const Login = () => {
   const { isLoggedIn, setIsLoggedIn } = useOutletContext();
@@ -43,7 +43,7 @@ const Login = () => {
   return (
     <div className="container-fluid my-5 d-flex align-items-center justify-content-center">
 
-      <form className="row g-3 border p-4 m-3 rounded-5 w-50" onSubmit={handleSubmit}>
+      <form className="row g-3 border p-4 m-3 rounded-5 shadow w-50" onSubmit={handleSubmit}>
 
         <h1 className="text-center mb-4">Login</h1>
 
@@ -55,13 +55,19 @@ const Login = () => {
         <div className="mb-3">
           <label className="form-label">Password</label>
           <input type="password" className="form-control" placeholder="Enter your password" name="password" onChange={handleChange} />
-        </div>
 
+          <br />
+
+          <Link to={'/forgot-password'}>Forgot Password?</Link>
+        </div>
         <div className="d-grid gap-2">
+
           <button className="btn btn-primary" type="submit">Login</button>
+
         </div>
 
       </form>
+
     </div>
   )
 }
